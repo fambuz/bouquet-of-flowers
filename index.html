@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>A Bouquet for You ♡</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{width:100%;height:100%;margin:0}
+  body{
+    overflow:hidden;
+    display:grid;
+    place-items:center;
+    background:
+      radial-gradient(ellipse at 50% 42%,rgba(255,255,255,.96) 0 19%,transparent 58%),
+      linear-gradient(145deg,#fff8f7,#fdebf2 55%,#f1eafa);
+  }
+  .scene{
+    position:relative;width:100%;height:100%;min-height:420px;
+    display:grid;place-items:center;overflow:hidden;
+  }
+  .glow{
+    position:absolute;width:min(80vw,780px);aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle,#fff 0%,rgba(255,255,255,.48) 43%,transparent 70%);
+    filter:blur(8px);
+  }
+  .bouquet{
+    position:relative;z-index:2;width:min(96vw,900px);height:min(96vh,900px);
+    display:grid;place-items:center;animation:float 6s ease-in-out infinite;
+    transform-origin:50% 80%;
+  }
+  svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 24px 28px rgba(132,76,101,.13))}
+  .petal{transform-box:fill-box;transform-origin:center}
+  .flower{transform-box:fill-box;transform-origin:center}
+  .flower-a{animation:bloom 1.2s ease-out both}
+  .flower-b{animation:bloom 1.4s .12s ease-out both}
+  .flower-c{animation:bloom 1.3s .2s ease-out both}
+  @keyframes float{0%,100%{transform:translateY(7px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}
+  @keyframes bloom{from{opacity:0;transform:scale(.65)}to{opacity:1;transform:scale(1)}}
+  .sparkle{position:absolute;z-index:1;color:#d99ab2;font:26px Georgia;opacity:.55;animation:twinkle 3s ease-in-out infinite}
+  .s1{top:17%;left:17%}.s2{top:24%;right:16%;animation-delay:1s}
+  .s3{bottom:20%;left:13%;animation-delay:1.7s}.s4{bottom:18%;right:15%;animation-delay:.5s}
+  @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.8;transform:scale(1.2)}}
+  @media(max-width:600px){
+    .bouquet{width:120vw;height:95vh}
+    .s1{left:5%}.s2{right:5%}.s3{left:4%}.s4{right:4%}
+  }
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+</style>
+</head>
+<body>
+<main class="scene" aria-label="A large, colourful flower bouquet">
+  <div class="glow"></div>
+  <span class="sparkle s1">✧</span><span class="sparkle s2">✦</span>
+  <span class="sparkle s3">✧</span><span class="sparkle s4">✦</span>
+  <div class="bouquet">
+  <svg viewBox="0 0 800 850" role="img" aria-label="A full bouquet of pink tulips, roses, lilies and small blossoms tied with a pink ribbon">
+    <defs>
+      <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#fff4f1"/><stop offset=".48" stop-color="#f6cbd8"/><stop offset="1" stop-color="#e9a9c1"/>
+      </linearGradient>
+      <linearGradient id="paper2" x1="0" y1="0" x2="0.8" y2="1">
+        <stop stop-color="#fffaf7"/><stop offset="1" stop-color="#edb9cb"/>
+      </linearGradient>
+      <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0">
+        <stop stop-color="#557e62"/><stop offset=".5" stop-color="#91b68c"/><stop offset="1" stop-color="#557e62"/>
+      </linearGradient>
+      <radialGradient id="rosePink"><stop stop-color="#ffe0e9"/><stop offset=".65" stop-color="#f28eae"/><stop offset="1" stop-color="#d75e8b"/></radialGradient>
+      <radialGradient id="roseCoral"><stop stop-color="#fff0df"/><stop offset=".68" stop-color="#f6a28f"/><stop offset="1" stop-color="#df7181"/></radialGradient>
+      <radialGradient id="lily"><stop stop-color="#fff9ed"/><stop offset=".65" stop-color="#fff0f1"/><stop offset="1" stop-color="#e8a1bf"/></radialGradient>
+      <g id="leaf">
+        <path d="M0 0 C-35 -45 -95 -45 -112 -4 C-76 28 -28 28 0 0Z" fill="#79a77e" stroke="#5d8a68" stroke-width="2"/>
+        <path d="M-4 0 Q-54 -5 -103 -4" fill="none" stroke="#c4d9ad" stroke-width="2"/>
+      </g>
+      <g id="rose">
+        <g fill="url(#rosePink)" stroke="#dc7195" stroke-width="1.5">
+          <ellipse cx="0" cy="-35" rx="25" ry="39"/>
+          <ellipse cx="0" cy="-35" rx="25" ry="39" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-35" rx="25" ry="39" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-35" rx="25" ry="39" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-35" rx="25" ry="39" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-35" rx="25" ry="39" transform="rotate(300)"/>
+        </g>
+        <path d="M-20 -3 C-27 -28 5 -43 22 -20 C37 0 9 26 -9 17 C-27 8 -8 -19 8 -15 C23 -10 15 8 3 8 C-5 8 -8 0 -2 -5" fill="none" stroke="#c84e7e" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-8 -4 Q0 -18 10 -8" fill="none" stroke="#ffe3e9" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <g id="tulip">
+        <path d="M0 20 C-38 -4 -47 -48 -25 -78 C-12 -61 -5 -55 0 -53 C7 -64 16 -74 26 -79 C48 -46 36 -5 0 20Z" fill="#ed8eae" stroke="#d66f96" stroke-width="2"/>
+        <path d="M0 13 C-12 -17 -9 -48 0 -63 C10 -37 12 -9 0 13Z" fill="#ffd1df" opacity=".8"/>
+        <path d="M-21 -54 Q-9 -29 -6 -8" stroke="#ffe9ef" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </g>
+      <g id="lilyflower">
+        <g fill="url(#lily)" stroke="#df9ab7" stroke-width="2">
+          <path d="M0 0 C-32 -15 -49 -65 -15 -89 C5 -59 12 -27 0 0Z"/>
+          <path d="M0 0 C-32 -15 -49 -65 -15 -89 C5 -59 12 -27 0 0Z" transform="rotate(60)"/>
+          <path d="M0 0 C-32 -15 -49 -65 -15 -89 C5 -59 12 -27 0 0Z" transform="rotate(120)"/>
+          <path d="M0 0 C-32 -15 -49 -65 -15 -89 C5 -59 12 -27 0 0Z" transform="rotate(180)"/>
+          <path d="M0 0 C-32 -15 -49 -65 -15 -89 C5 -59 12 -27 0 0Z" transform="rotate(240)"/>
+          <path d="M0 0 C-32 -15 -49 -65 -15 -89 C5 -59 12 -27 0 0Z" transform="rotate(300)"/>
+        </g>
+        <circle r="13" fill="#e9b75d"/>
+        <g stroke="#d7a34f" stroke-width="3" stroke-linecap="round">
+          <path d="M0 0L-5 -35M0 0L19 -29M0 0L-23 -25"/>
+        </g>
+        <g fill="#b66d76"><circle cx="-5" cy="-35" r="3"/><circle cx="19" cy="-29" r="3"/><circle cx="-23" cy="-25" r="3"/></g>
+      </g>
+    </defs>
+
+    <!-- stems and foliage -->
+    <g fill="none" stroke="url(#stem)" stroke-width="8" stroke-linecap="round">
+      <path d="M400 690 Q310 420 205 190"/>
+      <path d="M400 690 Q345 420 330 105"/>
+      <path d="M400 690 Q395 410 465 85"/>
+      <path d="M400 690 Q465 425 590 180"/>
+      <path d="M400 690 Q275 470 125 330"/>
+      <path d="M400 690 Q510 470 680 320"/>
+      <path d="M400 690 Q380 460 390 230"/>
+      <path d="M400 690 Q470 470 520 300"/>
+    </g>
+    <g>
+      <use href="#leaf" transform="translate(310 470) rotate(18) scale(.9)"/>
+      <use href="#leaf" transform="translate(470 490) rotate(160) scale(.9)"/>
+      <use href="#leaf" transform="translate(265 385) rotate(-18) scale(.78)"/>
+      <use href="#leaf" transform="translate(535 390) rotate(175) scale(.82)"/>
+      <use href="#leaf" transform="translate(350 570) rotate(15) scale(.72)"/>
+      <use href="#leaf" transform="translate(450 570) rotate(165) scale(.75)"/>
+      <use href="#leaf" transform="translate(220 545) rotate(-25) scale(.7)"/>
+      <use href="#leaf" transform="translate(585 535) rotate(190) scale(.7)"/>
+    </g>
+
+    <!-- back row flowers -->
+    <g class="flower flower-a">
+      <use href="#tulip" transform="translate(205 195) rotate(-18) scale(1.08)"/>
+      <use href="#tulip" transform="translate(330 111) rotate(-5) scale(1.15)" />
+      <use href="#tulip" transform="translate(465 91) rotate(8) scale(1.12)"/>
+      <use href="#tulip" transform="translate(590 185) rotate(19) scale(1.05)"/>
+      <use href="#lilyflower" transform="translate(126 332) rotate(-24) scale(.82)"/>
+      <use href="#lilyflower" transform="translate(680 320) rotate(25) scale(.82)"/>
+    </g>
+
+    <!-- central roses and lilies -->
+    <g class="flower flower-b">
+      <use href="#rose" transform="translate(278 290) scale(1.1)"/>
+      <use href="#rose" transform="translate(405 240) scale(1.22)"/>
+      <use href="#rose" transform="translate(535 295) scale(1.08)"/>
+      <use href="#lilyflower" transform="translate(345 380) rotate(-8) scale(.9)"/>
+      <use href="#lilyflower" transform="translate(475 390) rotate(10) scale(.86)"/>
+    </g>
+
+    <!-- little filler blossoms -->
+    <g class="flower flower-c" fill="#fff3f7" stroke="#e4a2bd" stroke-width="2">
+      <g transform="translate(205 410)">
+        <circle r="12"/><circle cy="-15" r="9"/><circle cx="14" cy="-5" r="9"/><circle cx="9" cy="12" r="9"/><circle cx="-9" cy="12" r="9"/><circle cx="-14" cy="-5" r="9"/><circle r="5" fill="#edc46d" stroke="none"/>
+      </g>
+      <g transform="translate(590 420) scale(.9)">
+        <circle r="12"/><circle cy="-15" r="9"/><circle cx="14" cy="-5" r="9"/><circle cx="9" cy="12" r="9"/><circle cx="-9" cy="12" r="9"/><circle cx="-14" cy="-5" r="9"/><circle r="5" fill="#edc46d" stroke="none"/>
+      </g>
+      <g transform="translate(330 475) scale(.72)">
+        <circle r="12"/><circle cy="-15" r="9"/><circle cx="14" cy="-5" r="9"/><circle cx="9" cy="12" r="9"/><circle cx="-9" cy="12" r="9"/><circle cx="-14" cy="-5" r="9"/><circle r="5" fill="#edc46d" stroke="none"/>
+      </g>
+      <g transform="translate(500 485) scale(.75)">
+        <circle r="12"/><circle cy="-15" r="9"/><circle cx="14" cy="-5" r="9"/><circle cx="9" cy="12" r="9"/><circle cx="-9" cy="12" r="9"/><circle cx="-14" cy="-5" r="9"/><circle r="5" fill="#edc46d" stroke="none"/>
+      </g>
+    </g>
+
+    <!-- bouquet wrapping -->
+    <path d="M185 470 Q400 560 615 470 L505 795 Q400 835 295 795Z" fill="url(#paper)" stroke="#e5b2c4" stroke-width="3"/>
+    <path d="M185 470 Q285 580 400 615 L295 795 Q255 680 185 470Z" fill="url(#paper2)" opacity=".9"/>
+    <path d="M615 470 Q515 580 400 615 L505 795 Q545 680 615 470Z" fill="#f7dce4" opacity=".8"/>
+    <path d="M265 535 Q400 610 535 535" fill="none" stroke="#fff9f7" stroke-width="7" opacity=".9"/>
+    <path d="M400 605 Q365 700 400 815" fill="none" stroke="#fff7f5" stroke-width="4" opacity=".6"/>
+
+    <!-- large satin bow -->
+    <path d="M390 635 C320 565 245 590 280 660 C310 710 365 674 400 654Z" fill="#c96f91" stroke="#a94f78" stroke-width="3"/>
+    <path d="M410 635 C480 565 555 590 520 660 C490 710 435 674 400 654Z" fill="#d985a4" stroke="#a94f78" stroke-width="3"/>
+    <path d="M388 650 Q340 730 325 775 Q385 755 405 675Z" fill="#b95c81" stroke="#a94f78" stroke-width="3"/>
+    <path d="M412 650 Q460 730 475 775 Q415 755 395 675Z" fill="#c96f91" stroke="#a94f78" stroke-width="3"/>
+    <ellipse cx="400" cy="649" rx="25" ry="19" fill="#e9a4bb" stroke="#a94f78" stroke-width="3"/>
+    <path d="M387 645 Q400 635 413 645" fill="none" stroke="#ffe5ed" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+  </div>
+</main>
+</body>
+</html>
